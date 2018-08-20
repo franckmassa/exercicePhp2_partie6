@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Exercice2</title>
+    <title>Exercice 2</title>
   </head>
   <body>
-<p>
-<?php
-//Test pour verifier que l'age existe dans l'url
-if(isset($_GET['lastname']) && isset($_GET['firstname']) && isset($_GET['age'])){
-  echo $_GET['lastname'] . ' ' . $_GET['firstname'] . ' ' . $_GET['age'];
-} else {
-  echo 'il manque l\'age !';
-}
- ?>
-</p>
+    <p>
+       <?php
+       //Création d'une condition si le paramètre âge existe
+         if(!empty($_GET['lastname']) && !empty($_GET['firstname']) && !empty($_GET['age'])){
+           echo $_GET['lastname'] . ' ' . $_GET['firstname'] . ' ' . $_GET['age'];
+         } else {
+           //Autre condition si le paramètre age n'est pas présent
+           echo 'Il manque l\'âge';
+         }
+       ?>
+    </p>
   </body>
 </html>
